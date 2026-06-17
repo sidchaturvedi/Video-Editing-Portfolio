@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edisid | Video Editor</title>
+    <meta name="description"
+        content="Edisid - Video editing that breaks the internet. Engineering attention, not just cutting clips.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <!-- GSAP for smooth animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Three.js for 3D graphics -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+    <div id="canvas-container"></div>
+
+    <nav class="navbar">
+        <div class="logo">Edisid.</div>
+        <div class="nav-links">
+            <a href="#about">The Chemistry</a>
+            <a href="#work">Edits</a>
+            <a href="#contact" class="btn-outline">Hit My Line</a>
+        </div>
+    </nav>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">EDISID</h1>
+                <p class="subtitle">I edit videos that actually make people stop scrolling.</p>
+                <div class="scroll-indicator">
+                    <span>scroll</span>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="philosophy-text">
+                    <p class="reveal-text">Anyone can learn Premiere.</p>
+                    <p class="reveal-text highlight">I know how to engineer attention.</p>
+                    <p class="reveal-text small">"You know the business. And I know the chemistry. I'm thinking... maybe
+                        you and I could partner up."</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="work" class="work-section">
+            <div class="container">
+                <h2 class="section-title">The Archives</h2>
+                <div class="video-grid">
+                    <!-- Gym Edit -->
+                    <div class="video-card" data-category="Gym" data-url="https://youtube.com/shorts/KiKOBPR3XK8?feature=share">
+                        <div class="video-thumbnail gym-thumb" style="background-image: url('https://img.youtube.com/vi/KiKOBPR3XK8/maxresdefault.jpg')">
+                            <div class="play-btn"></div>
+                        </div>
+                        <h3>Pre-workout in video form.</h3>
+                        <p>Gym</p>
+                    </div>
+                    <!-- Movie Edit 1 -->
+                    <div class="video-card" data-category="Movie"
+                        data-url="https://youtube.com/shorts/XUMINxuPU14?si=uE5YbGBdrIEB91bI">
+                        <div class="video-thumbnail movie-thumb-1"
+                            style="background-image: url('https://img.youtube.com/vi/XUMINxuPU14/maxresdefault.jpg')">
+                            <div class="play-btn"></div>
+                        </div>
+                        <h3>Making good movies look better.</h3>
+                        <p>Movie Edit</p>
+                    </div>
+                    <!-- Movie Edit 2 -->
+                    <div class="video-card" data-category="Movie"
+                        data-url="https://youtube.com/shorts/ZphWndeXPs4?si=7_2VDCc40P4AOfm7">
+                        <div class="video-thumbnail movie-thumb-2"
+                            style="background-image: url('https://img.youtube.com/vi/ZphWndeXPs4/maxresdefault.jpg')">
+                            <div class="play-btn"></div>
+                        </div>
+                        <h3>That one cinematic sequence.</h3>
+                        <p>Movie Edit</p>
+                    </div>
+                    <!-- Anime Edit 1 -->
+                    <div class="video-card" data-category="Anime"
+                        data-url="https://youtube.com/shorts/HR3Jl6HHd5Q?si=voWxe_6WTpNbJEm8">
+                        <div class="video-thumbnail anime-thumb-1"
+                            style="background-image: url('https://img.youtube.com/vi/HR3Jl6HHd5Q/maxresdefault.jpg')">
+                            <div class="play-btn"></div>
+                        </div>
+                        <h3>Smooth transitions only.</h3>
+                        <p>Anime Edit</p>
+                    </div>
+                    <!-- Anime Edit 2 -->
+                    <div class="video-card" data-category="Anime"
+                        data-url="https://youtube.com/shorts/9MB8nLjyaPw?si=jxc74J5Q_Oxw9fuk">
+                        <div class="video-thumbnail anime-thumb-2"
+                            style="background-image: url('https://img.youtube.com/vi/9MB8nLjyaPw/maxresdefault.jpg')">
+                            <div class="play-btn"></div>
+                        </div>
+                        <h3>Anime but it hits different.</h3>
+                        <p>Anime Edit</p>
+                    </div>
+                    <!-- Car Edit 1 -->
+                    <div class="video-card" data-category="Cinematic"
+                        data-url="https://youtube.com/shorts/CJoczWChoqk?si=uP3WdYZwBAJf41Aj">
+                        <div class="video-thumbnail car-thumb-1"
+                            style="background-image: url('https://img.youtube.com/vi/CJoczWChoqk/maxresdefault.jpg')">
+                            <div class="play-btn"></div>
+                        </div>
+                        <h3>3AM Tokyo Vibes.</h3>
+                        <p>Cinematic Car Edit</p>
+                    </div>
+                    <!-- Car Edit 2 -->
+                    <div class="video-card" data-category="Cinematic"
+                        data-url="https://youtube.com/shorts/2uXc--fk2JE?si=q_OAwW_3GCfSuJbk">
+                        <div class="video-thumbnail car-thumb-2"
+                            style="background-image: url('https://img.youtube.com/vi/2uXc--fk2JE/maxresdefault.jpg')">
+                            <div class="play-btn"></div>
+                        </div>
+                        <h3>JDM Aesthetic.</h3>
+                        <p>Cinematic Car Edit</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="contact-card">
+                    <h2 class="contact-title">Let's Break The Internet.</h2>
+                    <p>Stop overthinking. Let's get to work.</p>
+
+                    <div class="copy-email-widget" id="copy-email">
+                        <span class="email-text">edisid25@gmail.com</span>
+                        <div class="copy-feedback">Copied to clipboard! 🚀</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Custom Video Modal -->
+    <div id="video-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="video-wrapper">
+                <iframe id="youtube-player" width="100%" height="100%" src="" frameborder="0"
+                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="three-scene.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
